@@ -56,8 +56,10 @@ class FizzTest(unittest.TestCase):
 	def test_for_inapplicable(self):
 		self.assertEquals(fizz_buzz(26), 26, msg='Should return value if not divisible by both 3 and 5')
 
+
 	def test_for_validity(self):
 		self.assertTrue(fizz_buzz(15), 'FizzBuzz')
+
 
 	def test_for_argument(self):
 		self.assertNotIsInstance(fizz_buzz('Fizz'), int, msg="Input an integer")
