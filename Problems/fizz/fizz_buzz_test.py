@@ -1,19 +1,10 @@
 import unittest
 from fizz_buzz import fizz_buzz
 
-'''
- check whether input is null
- check for string input
- check whether multiple of 3 == Fizz
- check whether multiple of 5 == Buzz
- check both == FizzBuzz
- check for equality/ validity
- check for divisbility
- check input
-'''
 
 def empty_arg():
 	raise Exception('Provide one argument')
+
 
 def string_arg(fizz):
 	raise Exception('Provide a numerical value')
@@ -63,6 +54,11 @@ class FizzTest(unittest.TestCase):
 
 	def test_for_argument(self):
 		self.assertNotIsInstance(fizz_buzz('Fizz'), int, msg="Input an integer")
+
+
+	def test_int_argument(self):
+		x = 10
+		self.assertTrue(type(x), int, msg="Provide integer argument")
 
 
 if __name__=='__main__':
